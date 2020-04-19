@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <script src="test.js"></script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Piano Student Registration</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="icon.png">
+</head>
+
+<body>
+  <header>
+    <button id="home" onclick="location.href='../index.html'">Home</button>
+    <img src="logo.png" alt="item shop logo" id="logo">
+    <h1>PIANO STUDENT REGISTRATION</h1>
+    <p id="boxSolutions">by Box Solutions</p>
+  </header>
+  <div id="banner"></div>
+
+  <div id="content">
+    <form id="registrationForm" onreset="refocus()">
+      <!-- 1st student -->
+      <label for="first_name">First Name</label><br>
+      <input type="text" id="first_name" name="first_name" class="mustFill"><br>
+      <label for="last_name">Last Name</label><br>
+      <input type="text" id="last_name" name="last_name" class="mustFill"><br>
+      <label for="student_id">Student ID</label><br>
+      <input type="text" id="student_id" name="student_id" class="mustFill"><br>
+
+      <label for="performance">Performance Type</label><br>
+      <select id="performance" name="performance" class="mustFill" onchange="checkDuet()">
+        <div id="secondStudentFields">
+          <option value="-">-</option>
+          <option value="Solo">Solo</option>
+          <option value="Duet">Duet</option>  
+          <option value="Concerto">Concerto</option>
+        </div>
+      </select><br>
+
+      <!-- 2nd student (only visible if "duet" is chosen) -->
+      <div id="student_2">
+        <p><b>2nd Student</b></p>
+        <label for="first_name_2">First Name</label><br>
+        <input type="text" id="first_name_2" name="first_name_2" class="mustFill_2"><br>
+        <label for="last_name_2">Last Name</label><br>
+        <input type="text" id="last_name_2" name="last_name_2" class="mustFill_2"><br>
+        <label for="student_id_2">Student ID</label><br>
+        <input type="text" id="student_id_2" name="student_id_2" class="mustFill_2">
+      </div>
+
+      <label for="skill">Skill Level</label><br>
+      <select id="skill" name="skill" class="mustFill">
+        <option value="-">-</option>
+        <option value="Beginner">Beginner</option>
+        <option value="Intermediate">Intermediate</option>
+        <option value="Pre-advanced">Pre-advanced</option>
+        <option value="Advanced">Advanced</option>
+      </select><br>
+
+      <label for="instrument">Instrument</label><br>
+      <select id="instrument" name="instrument" class="mustFill">
+        <option value="-">-</option>
+        <option value="Piano">Piano</option>
+        <option value="Voice">Voice</option>
+        <option value="String">String</option>
+        <option value="Organ">Organ</option>
+        <option value="Other">Other</option>
+      </select><br>
+
+      <label for="location">Location</label><br>
+      <select id="location" name="location" class="mustFill">
+        <option value="-">-</option>
+        <option value="Austin">Austin</option>
+        <option value="Hart">Hart</option>
+        <option value="Hinckley">Hinckley</option>
+        <option value="I-Center">I-Center</option>
+        <option value="Snow">Snow</option>
+        <option value="Spori">Spori</option>
+        <option value="Taylor">Taylor
+      </select><br>
+
+      <label for="room">Room Number</label><br>
+      <input type="text" id="room" name="room" class="mustFill"><br>
+
+      <label for="time_slot">Time Slot</label><br>
+      <!-- possible TODO: find a better input type/format -->
+      <input type="text" id="time_slot" name="time_slot" class="mustFill"><br>
+
+      <button type="button" id="register" name="register" onclick="submitInfo()">
+        Register</button>
+      <button type="reset" id="clear" name="clear">Clear</button>
+    </form>
+
+    <br><br>
+  </div>
+
+  <div id="registeredStudents">
+    <h2>Registered Students</h2>
+    <table id="registeredTable">
+      <tr>
+        <th>Name</th>
+        <th>Location</th>
+        <th>Time</th>
+        <th>Performance</th>
+      </tr>
+    </table>
+  </div>
+
+  <footer>
+    <p>No rights reserved</p>
+    <p>La | Dee | Da</p>
+    <p>2020</p>
+  </footer>
+</body>
+
+</html>
