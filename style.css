@@ -1,0 +1,43 @@
+html { font-family: sans-serif; }
+
+body {
+  background-color: white;
+  margin: 0;
+  width: 100%;
+  padding-top: 50px;
+  text-align: center;
+}
+
+div#rule_card {
+  display: flex;
+  width: 200px;
+  height: 300px;
+  margin: auto;
+  color: white;
+  background-color: rgb(64, 156, 64);
+  border-radius: 15px;
+  border-style: solid;
+  border-collapse: collapse;
+  border-color: gray;
+  border-width: 5px;
+  font-size: 120pt;
+}
+
+div#rule_card>p {
+  width: 150px;
+  margin: auto;
+  text-align: center;
+}
+
+#button_new,#button_previous {
+  width: 150px;
+  height: 30px;
+  margin: 25px auto 0 auto;
+  background-color: rgb(199, 199, 199);
+  font-size: 10pt;
+  line-height: 30px;
+}
+
+#button_previous {
+  color: gray;
+}
